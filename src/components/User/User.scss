@@ -1,0 +1,65 @@
+.user {
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas: 
+    'h h h'
+    'n s p'
+    'c sex d'
+    'r r r';
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+    input {
+        width: calc(100% - 2rem);
+        border-radius: 4px;
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    h1 {
+        grid-area: h;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    button {
+        max-width: 300px;
+        grid-area: r;
+        text-align: right;
+    }
+
+
+    .input_container {
+
+        &__name {
+            grid-area: n;
+        }
+
+        &__surname {
+            grid-area: s;
+        }
+
+        &__patronymics {
+            grid-area: p;
+        }
+
+        &__country {
+            grid-area: c;
+        }
+
+        &__sex {
+            grid-area: sex;
+        }
+
+        &__date {
+            grid-area: d;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 100%;
+            display: block;
+        }
+    }
+}
